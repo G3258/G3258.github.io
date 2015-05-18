@@ -5,7 +5,7 @@
 <title>AJAX</title>
 <script type="text/javascript">
 	var testvar;
-	function loadXMLDoc() {
+	function loadXMLDoc(file) {
 		var xmlhttp;
 		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
 			xmlhttp = new XMLHttpRequest();
@@ -19,7 +19,7 @@
 				testvar=xmlhttp.responseText;
 			}
 		}
-		xmlhttp.open("GET", "test.html", true);
+		xmlhttp.open("GET", file, true);
 		xmlhttp.send();
 	}
 </script>
@@ -29,7 +29,9 @@
 	<div id="myDiv">
 		<h2>Let AJAX change this text</h2>
 	</div>
-	<button type="button" onclick="loadXMLDoc()">通过 AJAX 改变内容</button>
-	这是测试用的静态数据。。。。。。。
+	<button type="button" onclick="loadXMLDoc("test.html")">通过 AJAX 载入html文件改变内容</button>
+	<br>
+	<button type="button" onclick="loadXMLDoc("test.txt")">通过 AJAX 载入txt文件改变内容</button>
+	
 </body>
 </html>
