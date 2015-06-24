@@ -2,38 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AJAX</title>
+<title></title>
+<link rel="stylesheet" href="css/index.css">
 <script type="text/javascript">
-	var testvar;
-	function loadXMLDoc(file) {
-		var xmlhttp;
-		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
-			xmlhttp = new XMLHttpRequest();
-		} else {// code for IE6, IE5
-			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		}
-		var tmp=0;
-		xmlhttp.onreadystatechange = function() {
-			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-				document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-				testvar=xmlhttp.responseText;
-			}
-		}
-		xmlhttp.open("GET", file, true);
-		xmlhttp.send();
-	}
+	var title = document.getElementsByTagName("title");
+	document.title = "(｡•ˇ‸ˇ•｡)"
 </script>
 </head>
-<body>
 
-	<div id="myDiv">
-		<h2>Let AJAX change this text</h2>
+<body>
+	<div id="top">
+		<div id="b_name">G3258</div>
 	</div>
-	<button type="button" onclick="loadXMLDoc('test.html')">通过 AJAX 载入html文件改变内容</button>
-	<br>
-	<button type="button" onclick="loadXMLDoc('test.txt')">通过 AJAX 载入txt文件改变内容</button>
-	<br>
-	<button type="button" onclick="loadXMLDoc('test')">通过 AJAX 载入其它类型文件改变内容</button>
-	
+	<div id="menu">
+		<ul>
+			<li class="menu"><a href=".">瞎扯</a></li>
+			<li class="menu"><a href="./lab/lab.html">实验室</a></li>
+			<li class="menu"><a href="./html/about.html">关于</a></li>
+		</ul>
+	</div>
+	<div id="mid">
+	个人试验性项目，对世界贡献不大，不要有太多期望
+	</div>
+	<div id="btm">
+		<ul class="btm_dsc">
+			<li>G3258 编写</li>
+			<li>Github Page 提供网络服务支持</li>
+		</ul>
+	</div>
 </body>
 </html>
